@@ -1,7 +1,10 @@
 package ca.cmpt362.projects.weCareApp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
@@ -29,6 +32,13 @@ class SplashScreenActivity : AppCompatActivity() {
         splashLogo.animation = topAnimation
         splashAppName.animation = bottomAnimation
         splashSlogan.animation = bottomAnimation
+
+//        open Main Activity:
+        Handler(Looper.getMainLooper()).postDelayed({
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }, 3000)
 
     }
 }
