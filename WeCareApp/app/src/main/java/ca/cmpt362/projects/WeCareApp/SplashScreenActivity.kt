@@ -17,11 +17,21 @@ import android.widget.TextView
 //https://www.geeksforgeeks.org/how-to-create-a-splash-screen-in-android-using-kotlin/
 
 class SplashScreenActivity : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
 
+        playAnimation()
+
+//        open Main Activity:
+        Handler(Looper.getMainLooper()).postDelayed({
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }, 4000)
+    }
+
+    private fun playAnimation(){
         val topAnimation: Animation = AnimationUtils.loadAnimation(this, R.anim.top_animation)
         val bottomAnimation = AnimationUtils.loadAnimation(this, R.anim.bottom_animation)
 
@@ -32,12 +42,7 @@ class SplashScreenActivity : AppCompatActivity() {
         splashLogo.animation = topAnimation
         splashAppName.animation = bottomAnimation
         splashSlogan.animation = bottomAnimation
-
-//        open Main Activity:
-        Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            finish()
-        }, 4000)
     }
+
+
 }
