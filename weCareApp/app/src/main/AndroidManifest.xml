@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WeCare">
+
+        <activity android:name=".ForgotPasswordActivity"
+            android:theme="@style/Theme.WeCare"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="true" >
