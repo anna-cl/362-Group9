@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/wecare_logo.xml" value="0.31666666666666665" />
         <entry key="app/src/main/res/layout/activity_display_msg.xml" value="0.15" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1953125" />
+        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
       </map>
     </option>
   </component>
