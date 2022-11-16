@@ -20,6 +20,9 @@
             android:name=".LoginActivity"
             android:theme="@style/Theme.WeCare.NoActionBar"
             android:exported="true" >
+            android:name=".SplashScreenActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,6 +30,10 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+        </activity>
     </application>
 
 </manifest>
