@@ -18,9 +18,9 @@
         android:scrollbarThumbVertical="@null">
 
         <LinearLayout
-            android:layout_centerVertical="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:orientation="vertical">
 
             <ImageView
@@ -112,17 +112,17 @@
             </androidx.cardview.widget.CardView>
 
             <Button
-                style="@style/TextyButton"
                 android:id="@+id/button_forgot_password"
+                style="@style/TextyButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
-                android:padding="10dp"
-                android:onClick="onClick"
                 android:layout_marginRight="24dp"
-                android:textColor="@color/md_black_1000"
                 android:background="@android:color/transparent"
-                android:text="@string/text_forgot_password" />
+                android:onClick="onClick"
+                android:padding="10dp"
+                android:text="@string/text_forgot_password"
+                android:textColor="@color/md_black_1000" />
 
             <Button
                 android:id="@+id/button_signin"
@@ -135,11 +135,11 @@
 
             <LinearLayout
                 android:id="@+id/social_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:gravity="center"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -154,30 +154,30 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:layout_margin="8dp"
-                        app:srcCompat="@drawable/ic_facebook"
                         android:layout_width="40dp"
-                        android:layout_height="40dp" />
+                        android:layout_height="40dp"
+                        android:layout_margin="8dp"
+                        app:srcCompat="@drawable/ic_facebook" />
 
                     <ImageView
-                        android:layout_margin="8dp"
-                        app:srcCompat="@drawable/ic_twitter"
                         android:layout_width="40dp"
-                        android:layout_height="40dp" />
+                        android:layout_height="40dp"
+                        android:layout_margin="8dp"
+                        app:srcCompat="@drawable/ic_twitter" />
                 </LinearLayout>
             </LinearLayout>
 
             <Button
-                style="@style/TextyButton"
                 android:id="@+id/button_signup"
+                style="@style/TextyButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:padding="20dp"
-                android:onClick="onClick"
-                android:textColor="@color/md_black_1000"
                 android:background="@android:color/transparent"
-                android:text="@string/text_signin_signup" />
+                android:onClick="onClick"
+                android:padding="20dp"
+                android:text="@string/text_signin_signup"
+                android:textColor="@color/md_black_1000" />
         </LinearLayout>
 
     </RelativeLayout>
