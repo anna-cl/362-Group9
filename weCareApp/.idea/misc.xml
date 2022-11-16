@@ -3,22 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/drawable-v24/button1_bg.xml" value="0.1" />
-        <entry key="app/src/main/res/drawable-v24/ic_back.xml" value="0.144" />
-        <entry key="app/src/main/res/drawable-v24/ic_facebook.xml" value="0.118" />
-        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.144" />
-        <entry key="app/src/main/res/drawable-v24/ic_lock.xml" value="0.119" />
-        <entry key="app/src/main/res/drawable-v24/ic_mail.xml" value="0.144" />
-        <entry key="app/src/main/res/drawable-v24/ic_person.xml" value="0.118" />
-        <entry key="app/src/main/res/drawable-v24/ic_phone.xml" value="0.119" />
-        <entry key="app/src/main/res/drawable-v24/ic_plus.xml" value="0.118" />
-        <entry key="app/src/main/res/drawable-v24/ic_twitter.xml" value="0.119" />
         <entry key="app/src/main/res/drawable/wecare_logo.xml" value="0.31666666666666665" />
         <entry key="app/src/main/res/layout/activity_display_msg.xml" value="0.15" />
-        <entry key="app/src/main/res/layout/activity_forgot_password.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.24583333333333332" />
+        <entry key="app/src/main/res/layout/activity_forgot_password.xml" value="0.24583333333333332" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1953125" />
-        <entry key="app/src/main/res/layout/activity_signup.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
       </map>
     </option>
