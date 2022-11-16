@@ -120,6 +120,8 @@
                 android:padding="10dp"
                 android:onClick="onClick"
                 android:layout_marginRight="24dp"
+                android:textColor="@color/md_black_1000"
+                android:background="@android:color/transparent"
                 android:text="@string/text_forgot_password" />
 
             <Button
@@ -173,6 +175,8 @@
                 android:layout_gravity="center"
                 android:padding="20dp"
                 android:onClick="onClick"
+                android:textColor="@color/md_black_1000"
+                android:background="@android:color/transparent"
                 android:text="@string/text_signin_signup" />
         </LinearLayout>
 
