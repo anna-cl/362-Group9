@@ -7,5 +7,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "WeCare App"
-include ':app', ':CircleImageView-master:circleimageview'
-
+include ':app'
