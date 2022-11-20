@@ -3,6 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/User/merge_failed/362-Group9/WeCareApp/app/src/main/res/drawable-v24/button1_bg.xml" value="0.1" />
+        <entry key="..\:/Users/User/merge_failed/362-Group9/WeCareApp/app/src/main/res/drawable-v24/ic_back.xml" value="0.1" />
+        <entry key="..\:/Users/User/merge_failed/362-Group9/WeCareApp/app/src/main/res/drawable-v24/ic_facebook.xml" value="0.1" />
+        <entry key="..\:/Users/User/merge_failed/362-Group9/WeCareApp/app/src/main/res/drawable-v24/ic_lock.xml" value="0.1" />
+        <entry key="..\:/Users/User/merge_failed/362-Group9/WeCareApp/app/src/main/res/drawable-v24/ic_mail.xml" value="0.1" />
+        <entry key="..\:/Users/User/merge_failed/362-Group9/WeCareApp/app/src/main/res/drawable-v24/ic_person.xml" value="0.1" />
+        <entry key="..\:/Users/User/merge_failed/362-Group9/WeCareApp/app/src/main/res/drawable-v24/ic_phone.xml" value="0.1" />
+        <entry key="..\:/Users/User/merge_failed/362-Group9/WeCareApp/app/src/main/res/drawable-v24/ic_plus.xml" value="0.1" />
+        <entry key="..\:/Users/User/merge_failed/362-Group9/WeCareApp/app/src/main/res/drawable-v24/ic_twitter.xml" value="0.1" />
+        <entry key="..\:/Users/User/merge_failed/362-Group9/WeCareApp/app/src/main/res/layout/activity_forgot_password.xml" value="0.15989583333333332" />
+        <entry key="..\:/Users/User/merge_failed/362-Group9/WeCareApp/app/src/main/res/layout/activity_login.xml" value="0.15052083333333333" />
+        <entry key="..\:/Users/User/merge_failed/362-Group9/WeCareApp/app/src/main/res/layout/activity_signup.xml" value="0.15885416666666666" />
         <entry key="app/src/main/res/drawable/wecare_logo.xml" value="0.31666666666666665" />
         <entry key="app/src/main/res/layout/activity_display_msg.xml" value="0.15" />
         <entry key="app/src/main/res/layout/activity_forgot_password.xml" value="0.24583333333333332" />
