@@ -7,14 +7,21 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
+import android.widget.Button
 import androidx.appcompat.widget.Toolbar
 
 class LoginActivity : AppCompatActivity() {
-
+    private lateinit var buttonSignIn:Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         setStatusBarTransparent(this@LoginActivity)
+
+        buttonSignIn = findViewById(R.id.button_signin)
+        // if user has existing account, direct them to the MainMenu
+        buttonSignIn.setOnClickListener {
+            startActivity(Intent(this@LoginActivity, MainMenuActivity::class.java))
+        }
     }
 
     private fun setStatusBarTransparent(activity: AppCompatActivity){
