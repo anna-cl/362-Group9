@@ -10,6 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WeCare">
 
+        <activity android:name=".MeditationLandActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar"/>
+
+
+        <activity android:name=".DiaryActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar"/>
+
+        <activity android:name=".FindAClinicActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar"/>
+
+        <activity android:name=".SurveyActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar"/>
+
+        <activity android:name=".MainMenuActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar"/>
+
         <activity android:name=".ForgotPasswordActivity"
             android:theme="@style/Theme.WeCare.NoActionBar"/>
 
