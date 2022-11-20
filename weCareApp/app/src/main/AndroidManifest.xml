@@ -11,8 +11,15 @@
         android:theme="@style/Theme.WeCare">
 
         <activity android:name=".ForgotPasswordActivity"
-            android:theme="@style/Theme.WeCare"/>
+            android:theme="@style/Theme.WeCare.NoActionBar"/>
 
+        <activity android:name=".SignupActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar"/>
+
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar"
+            android:exported="true" />
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true"
