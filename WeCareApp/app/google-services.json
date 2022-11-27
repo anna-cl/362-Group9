@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "584240726069",
+    "project_id": "my-project-362-368201",
+    "storage_bucket": "my-project-362-368201.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:584240726069:android:7257f69f708589ee43f17c",
+        "android_client_info": {
+          "package_name": "ca.cmpt362.projects.weCareApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "584240726069-kvc0a8pjj78tbom75kkquj33l17qki3o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDr7b1oB3a4MZZvVoHma0qfc8Tltubcplk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "584240726069-kvc0a8pjj78tbom75kkquj33l17qki3o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
