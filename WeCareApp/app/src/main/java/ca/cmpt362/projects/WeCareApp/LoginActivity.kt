@@ -45,7 +45,7 @@ class LoginActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
             if (getPass.length < 6){
-                accountPassword.setError("Password must be at least 6 characters!") // if password too short
+                accountPassword.setError("Try again - that is not your current password") // if password too short - it's invalid
                 return@setOnClickListener
             }
             // sign user into their account

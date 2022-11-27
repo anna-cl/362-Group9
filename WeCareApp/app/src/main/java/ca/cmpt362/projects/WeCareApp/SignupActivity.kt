@@ -72,12 +72,16 @@ class SignupActivity : AppCompatActivity() {
                 password.setError("Password required!") // if password field is empty, show error
                 return@setOnClickListener
             }
+            if (getPass.length < 6){
+                password.setError("Not a valid password!") // if password too short (less than 6 characters)
+                return@setOnClickListener
+            }
             if (TextUtils.isEmpty(get_confirm_pass)){  // if password isn't confirmed, show error
                 confirmPassword.setError("Confirm password!")
                 return@setOnClickListener
             }
-            if (getPass.length < 6){
-                password.setError("Password must be at least 6 characters!") // if password too short
+            if (getPass != get_confirm_pass){   // if confirmed password is not same as entered password, show error
+                confirmPassword.setError("Passwords do not match!")
                 return@setOnClickListener
             }
 
