@@ -5,9 +5,19 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import ca.cmpt362.projects.weCareApp.R
 
 class RecyclerListAdapter(private val musicList: List<ItemsViewModel>) : RecyclerView.Adapter<RecyclerListAdapter.MusicViewHolder>() {
+
+    private lateinit var musicclickListener: onMusicItemClickListener
+
+    interface onMusicItemClickListener{
+        fun onItemClicked(position: Int)
+    }
+
+    fun setOnItemClickListener(listener: onMusicItemClickListener){
+        musicclickListener = listener
+    }
+
 
     // create new views
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MusicViewHolder {
@@ -16,7 +26,7 @@ class RecyclerListAdapter(private val musicList: List<ItemsViewModel>) : Recycle
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.music_item, parent, false)
 
-        return MusicViewHolder(view)
+        return MusicViewHolder(view, musicclickListener)
     }
 
     // binds the list items to a view
@@ -38,9 +48,18 @@ class RecyclerListAdapter(private val musicList: List<ItemsViewModel>) : Recycle
     }
 
     // Holds the views for adding it to image and text
-    class MusicViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
+    class MusicViewHolder(ItemView: View, listener: onMusicItemClickListener) : RecyclerView.ViewHolder(ItemView) {
         val imageView: ImageView = itemView.findViewById(R.id.music_icon)
         val textView: TextView = itemView.findViewById(R.id.musicNameTV)
+
+        init {
+             itemView.setOnClickListener{
+//                 listener.onItemClicked(position)
+                 listener.onItemClicked(adapterPosition)
+             }
+        }
+
+
     }
 }
 

@@ -1,9 +1,11 @@
 //citation:
 //https://www.geeksforgeeks.org/android-recyclerview-in-kotlin/
+//https://www.youtube.com/watch?v=dB9JOsVx-yY&t=83s&ab_channel=Foxandroid
 
 package ca.cmpt362.projects.weCareApp
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -43,6 +45,13 @@ class MeditationLandActivity:AppCompatActivity() {
             musicArrayList.add(eachMusic)
         }
 
-        recyclerview.adapter = RecyclerListAdapter(musicArrayList)
+        var adapter = RecyclerListAdapter(musicArrayList)
+        recyclerview.adapter = adapter
+        adapter.setOnItemClickListener(object: RecyclerListAdapter.onMusicItemClickListener{
+            override fun onItemClicked(position: Int) {
+                Toast.makeText(this@MeditationLandActivity, "You click $position!", Toast.LENGTH_SHORT).show()
+                println("---------- clicked $position !!!" )
+            }
+        })
     }
 }
