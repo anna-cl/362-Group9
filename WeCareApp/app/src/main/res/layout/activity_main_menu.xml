@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/menu_icon" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/musicNameTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -39,7 +39,7 @@
         app:layout_constraintEnd_toStartOf="@+id/findClinicBtnId"
         app:layout_constraintHorizontal_bias="0.707"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/musicNameTV" />
 
     <Button
         android:id="@+id/findClinicBtnId"
@@ -49,7 +49,7 @@
         android:layout_marginEnd="46dp"
         android:text="FIND A CLINIC"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/musicNameTV" />
 
     <Button
         android:id="@+id/diaryBtnId"

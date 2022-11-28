@@ -46,6 +46,4 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.2.0'
     // for adding cardview
     implementation 'androidx.cardview:cardview:1.0.0'
-    implementation "android.arch.lifecycle:extensions:1.1.1"  //ViewModel in Kotlin: Unresolved Reference
-
 }

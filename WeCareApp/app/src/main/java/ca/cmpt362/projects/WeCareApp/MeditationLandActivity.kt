@@ -7,37 +7,42 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import ca.cmpt362.projects.WeCareApp.ItemsViewModel
-import ca.cmpt362.projects.WeCareApp.RecyclerListAdapter
+import ca.cmpt362.projects.weCareApp.RecyclerListAdapter
+import ca.cmpt362.projects.weCareApp.ItemsViewModel
 
 class MeditationLandActivity:AppCompatActivity() {
+    private val musicArrayList: ArrayList<ItemsViewModel> = arrayListOf<ItemsViewModel>()
+    private lateinit var recyclerview: RecyclerView
+    lateinit var musicTitleList: Array<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_meditation_land)
 
 
-        // getting the recyclerview by its id
-        val recyclerview = findViewById<RecyclerView>(R.id.music_recyclerview)
+        musicTitleList = arrayOf(
+            "Epona Meditation",
+            "Breath Meditation",
+            "Relaxing Radiance Noise",
+            "Relaxing Radiance Peace",
+            "Relaxing Radiance Energy",
+            "Riopy Meditation"
+        )
 
-        // this creates a vertical layout Manager
+        recyclerview = findViewById<RecyclerView>(R.id.music_recyclerview) // getting the recyclerview by its id
         recyclerview.layoutManager = LinearLayoutManager(this)
+        recyclerview.setHasFixedSize(true)
 
-        // ArrayList of class ItemsViewModel
-        val data = ArrayList<ItemsViewModel>()
+        getMusicList()
+    }
 
-        // This loop will create 20 Views containing
-        // the image with the count of view
-        for (i in 1..8) {
-            data.add(ItemsViewModel(R.drawable.splash_logo,  " "+ i))
+    private fun getMusicList(){
+
+        for (i in musicTitleList.indices){
+            val eachMusic = ItemsViewModel(R.drawable.music_icon, musicTitleList[i])
+            musicArrayList.add(eachMusic)
         }
 
-        // This will pass the ArrayList to our Adapter
-        val adapter = RecyclerListAdapter(data)
-
-        // Setting the Adapter with the recyclerview
-        recyclerview.adapter = adapter
-
-
+        recyclerview.adapter = RecyclerListAdapter(musicArrayList)
     }
 }
