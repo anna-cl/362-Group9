@@ -1,34 +1,42 @@
+//citation:
+//https://www.geeksforgeeks.org/android-recyclerview-in-kotlin/
+
 package ca.cmpt362.projects.weCareApp
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import ca.cmpt362.projects.weCareApp.R
-//import okhttp3.OkHttpClient
-//import okhttp3.Request
-//import okhttp3.RequestBody;
-//import okhttp3.Response;
+import androidx.recyclerview.widget.RecyclerView
+import ca.cmpt362.projects.WeCareApp.ItemsViewModel
+import ca.cmpt362.projects.WeCareApp.RecyclerListAdapter
 
 class MeditationLandActivity:AppCompatActivity() {
-
-    private lateinit var linearLayoutManager: LinearLayoutManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_meditation_land)
-//        val client = OkHttpClient()
-//
-//        val request = Request.Builder()
-//            .url("https://theaudiodb.p.rapidapi.com/searchalbum.php?s=meditation")
-//            .get()
-//            .addHeader("X-RapidAPI-Key", "e3d576ba6amshb5bcf4f80c7dea5p1a2472jsn851e7a615f66")
-//            .addHeader("X-RapidAPI-Host", "theaudiodb.p.rapidapi.com")
-//            .build()
-//
-//        val response = client.newCall(request).execute()
-//
-//        println("------------ $response")
-//
+
+
+        // getting the recyclerview by its id
+        val recyclerview = findViewById<RecyclerView>(R.id.music_recyclerview)
+
+        // this creates a vertical layout Manager
+        recyclerview.layoutManager = LinearLayoutManager(this)
+
+        // ArrayList of class ItemsViewModel
+        val data = ArrayList<ItemsViewModel>()
+
+        // This loop will create 20 Views containing
+        // the image with the count of view
+        for (i in 1..8) {
+            data.add(ItemsViewModel(R.drawable.splash_logo,  " "+ i))
+        }
+
+        // This will pass the ArrayList to our Adapter
+        val adapter = RecyclerListAdapter(data)
+
+        // Setting the Adapter with the recyclerview
+        recyclerview.adapter = adapter
 
 
     }
