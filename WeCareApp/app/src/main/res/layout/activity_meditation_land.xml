@@ -5,25 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F1D3F5"
-    android:padding="16sp"
+    android:padding="4sp"
     android:scrollbarSize="25sp"
     tools:context=".MeditationLandActivity">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/meditationLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:id="@+id/meditationLayout">
+        android:orientation="vertical">
 
         <ImageView
             android:id="@+id/meditationImage"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/listenTV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:adjustViewBounds="true"
             app:srcCompat="@android:drawable/ic_menu_gallery" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/listenTV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -32,7 +36,11 @@
             android:textAlignment="center"
             android:textColor="#050505"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/meditationImage"
+            app:layout_constraintTop_toBottomOf="@+id/meditationImage" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/music_recyclerview"
@@ -40,11 +48,17 @@
             android:layout_height="wrap_content"
             android:layout_margin="3dp"
             android:orientation="vertical"
-            tools:itemCount="5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.833"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/listenTV"
+            app:layout_constraintVertical_bias="1.0"
+            tools:itemCount="6"
             tools:listitem="@layout/music_item">
 
         </androidx.recyclerview.widget.RecyclerView>
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
