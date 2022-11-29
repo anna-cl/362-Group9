@@ -8,5 +8,6 @@ class FindAClinicActivity:AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_find_clinic)
+    // tried to remove changes here
     }
 }
