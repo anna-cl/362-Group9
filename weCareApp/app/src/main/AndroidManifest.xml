@@ -20,6 +20,8 @@
         <activity android:name=".DiaryActivity"
             android:theme="@style/Theme.WeCare.NoActionBar"/>
 
+        <activity android:name=".FindClinicActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar"/>
 
         <activity android:name=".SurveyActivity"
             android:theme="@style/Theme.WeCare.NoActionBar"/>
