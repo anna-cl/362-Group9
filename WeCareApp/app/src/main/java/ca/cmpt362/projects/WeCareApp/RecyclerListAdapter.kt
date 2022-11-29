@@ -54,7 +54,6 @@ class RecyclerListAdapter(private val musicList: List<ItemsViewModel>) : Recycle
 
         init {
              itemView.setOnClickListener{
-//                 listener.onItemClicked(position)
                  listener.onItemClicked(adapterPosition)
              }
         }

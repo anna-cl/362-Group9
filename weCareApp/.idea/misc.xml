@@ -22,11 +22,11 @@
         <entry key="app/src/main/res/layout/activity_forgot_password.xml" value="0.24583333333333332" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1953125" />
         <entry key="app/src/main/res/layout/activity_main_menu.xml" value="0.24375" />
-        <entry key="app/src/main/res/layout/activity_meditation_land.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_meditation_land.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.24375" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
         <entry key="app/src/main/res/layout/card_view_design.xml" value="0.24375" />
-        <entry key="app/src/main/res/layout/music_item.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/music_item.xml" value="0.33" />
       </map>
     </option>
   </component>

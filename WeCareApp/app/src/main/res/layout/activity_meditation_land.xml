@@ -4,14 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F1D3F5"
     android:padding="16sp"
     android:scrollbarSize="25sp"
     tools:context=".MeditationLandActivity">
 
     <LinearLayout
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/meditationLayout">
 
         <ImageView
             android:id="@+id/meditationImage"
@@ -20,10 +22,22 @@
             android:layout_margin="3dp"
             app:srcCompat="@android:drawable/ic_menu_gallery" />
 
-        <androidx.recyclerview.widget.RecyclerView
+        <TextView
+            android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="sans-serif-thin"
+            android:text="Listen to Meditation Music"
+            android:textAlignment="center"
+            android:textColor="#050505"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/music_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="3dp"
             android:orientation="vertical"
             tools:itemCount="5"
