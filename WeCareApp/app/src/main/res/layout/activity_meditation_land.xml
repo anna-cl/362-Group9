@@ -9,6 +9,7 @@
     android:scrollbarSize="25sp"
     tools:context=".MeditationLandActivity">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/meditationLayout"
         android:layout_width="match_parent"
@@ -59,6 +60,12 @@
 
         </androidx.recyclerview.widget.RecyclerView>
 
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/music_frame_layout"
+            tools:ignore="MissingConstraints">
+        </FrameLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

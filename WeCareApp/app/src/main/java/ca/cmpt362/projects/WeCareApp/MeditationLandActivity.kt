@@ -2,24 +2,26 @@
 //https://www.geeksforgeeks.org/android-recyclerview-in-kotlin/
 //https://www.youtube.com/watch?v=dB9JOsVx-yY&t=83s&ab_channel=Foxandroid
 //https://stackoverflow.com/questions/30931889/adding-ripple-effect-to-recyclerview-item
+//https://stackoverflow.com/questions/15142780/how-do-i-remove-extra-space-above-and-below-imageview
+//https://stackoverflow.com/questions/1492554/set-transparent-background-of-an-imageview-on-android
 
 package ca.cmpt362.projects.weCareApp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import ca.cmpt362.projects.weCareApp.RecyclerListAdapter
-import ca.cmpt362.projects.weCareApp.ItemsViewModel
 import kotlin.random.Random
 
 class MeditationLandActivity:AppCompatActivity() {
     private val musicArrayList: ArrayList<ItemsViewModel> = arrayListOf<ItemsViewModel>()
     private lateinit var recyclerview: RecyclerView
+    private var imgID: Int = 0
     lateinit var musicTitleList: Array<String>
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +36,6 @@ class MeditationLandActivity:AppCompatActivity() {
 
     }
 
-
      fun setRandomImage(){
         var meditationImageList = arrayOf(
             R.drawable.cosmos1,
@@ -46,10 +47,9 @@ class MeditationLandActivity:AppCompatActivity() {
         )
 
         var randomInt: Int = Random.nextInt(0,6)
-         val imgID = meditationImageList[randomInt]
+         imgID = meditationImageList[randomInt]
 
          var imageView = ImageView(this)
-//        imageView.layoutParams = LinearLayout.LayoutParams(300,300)
         imageView = findViewById(R.id.meditationImage)
         imageView.setImageResource(imgID)
 
@@ -73,13 +73,28 @@ class MeditationLandActivity:AppCompatActivity() {
         var adapter = RecyclerListAdapter(musicArrayList)
         recyclerview.adapter = adapter
         adapter.setOnItemClickListener(object: RecyclerListAdapter.onMusicItemClickListener{
-            override fun onItemClicked(position: Int) {
-                Toast.makeText(this@MeditationLandActivity, "You click $position!", Toast.LENGTH_SHORT).show()
+            override fun onItemClicked(musicPosition: Int) {
+                Toast.makeText(this@MeditationLandActivity, "You click $musicPosition!", Toast.LENGTH_SHORT).show()
 
-//                TODO: open music fragment
-
-
+                // pass values and open activity:
+                val bundle= Bundle()
+                val intent = Intent(this@MeditationLandActivity, PlayMusicActivity::class.java)
+                bundle.putInt("MUSIC_POS", musicPosition)
+                bundle.putInt("MEDI_IMG_ID", imgID)
+                intent.putExtras(bundle)
+                startActivity(intent)
             }
         })
     }
+
+
+//    private fun openMusicFragment(){
+//        var fragmentMusic: MusicFragment = MusicFragment()
+//        if(fragmentMusic != null){
+//            val transaction = supportFragmentManager.beginTransaction()
+//            transaction.replace(R.id.music_frame_layout,fragmentMusic)
+//            transaction.commit()
+//        }
+//    }
+
 }
