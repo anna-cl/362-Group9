@@ -20,19 +20,6 @@
         <activity android:name=".DiaryActivity"
             android:theme="@style/Theme.WeCare.NoActionBar"/>
 
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDlvsNx6nCQDEx_4S9Mw1uacefM8AfP1M8" />
-
-        <activity android:name=".FindAClinicActivity"
-            android:theme="@style/Theme.WeCare.NoActionBar"
-            android:exported="true">
-            <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
 
         <activity android:name=".SurveyActivity"
             android:theme="@style/Theme.WeCare.NoActionBar"/>
