@@ -17,4 +17,13 @@
     <string name="button_sign_up">Sign p</string>
     <string name="text_signup_social_media">Or Sign up using social media</string>
     <string name="text_signup_terms">By signing up, you agree to our <b>terms and conditions</b></string>
+
+    <string name="addNewEntry">Add New Entry :</string>
+    <string name="delOrUpdate">Delete OR Update :</string>
+    <string name="hint_title">Please enter a title</string>
+    <string name="hint_entry">Please enter your diary entry </string>
+    <string name="btn_add">Add</string>
+    <string name="btn_delete">Delete</string>
+    <string name="btn_update">Update</string>
+
 </resources>
