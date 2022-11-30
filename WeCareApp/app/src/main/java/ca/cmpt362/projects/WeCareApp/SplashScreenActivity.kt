@@ -25,11 +25,10 @@ class SplashScreenActivity : AppCompatActivity() {
 
 //        open Main Activity:
         Handler(Looper.getMainLooper()).postDelayed({
-//            val intent = Intent(this, LoginActivity::class.java)  // !!!! ------------- UNCOMMENT this !!!!
-            val intent = Intent(this, MainMenuActivity::class.java) // -----------REMOVE THIS!!!
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
-        }, 2000)  // ----- CHANGE to 3500
+        }, 4000)
     }
 
     private fun playAnimation(){
