@@ -13,10 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WeCare">
 
-        <activity android:name="ca.cmpt362.projects.WeCareApp.diary.DiaryActivity"
+        <activity android:name=".MeditationLandActivity"
             android:theme="@style/Theme.WeCare.NoActionBar"/>
 
-        <activity android:name=".MeditationLandActivity"
+
+        <activity android:name=".DiaryActivity"
             android:theme="@style/Theme.WeCare.NoActionBar"/>
 
         <activity android:name=".FindClinicActivity"

@@ -17,27 +17,11 @@
         <entry key="..\:/Users/User/merge_failed/362-Group9/WeCareApp/app/src/main/res/layout/activity_main_menu.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/User/merge_failed/362-Group9/WeCareApp/app/src/main/res/layout/activity_signup.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/User/merge_failed/362-Group9/WeCareApp/app/src/main/res/layout/activity_survey.xml" value="0.1" />
-        <entry key="app/src/main/res/drawable-v24/ic_back.xml" value="0.1" />
-        <entry key="app/src/main/res/drawable-v24/ic_baseline_add_24.xml" value="0.119" />
-        <entry key="app/src/main/res/drawable-v24/ic_lock.xml" value="0.1" />
-        <entry key="app/src/main/res/drawable/ic_baseline_book_24.xml" value="0.235" />
-        <entry key="app/src/main/res/drawable/ic_baseline_local_hospital_24.xml" value="0.1975" />
-        <entry key="app/src/main/res/drawable/ic_baseline_location_on_24.xml" value="0.1975" />
         <entry key="app/src/main/res/drawable/wecare_logo.xml" value="0.31666666666666665" />
-        <entry key="app/src/main/res/layout/activity_diary.xml" value="0.1362559241706161" />
         <entry key="app/src/main/res/layout/activity_display_msg.xml" value="0.15" />
         <entry key="app/src/main/res/layout/activity_forgot_password.xml" value="0.24583333333333332" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1953125" />
-        <entry key="app/src/main/res/layout/activity_main_menu.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_meditation_land.xml" value="0.22826086956521738" />
-        <entry key="app/src/main/res/layout/activity_show_entry.xml" value="0.10648148148148148" />
-        <entry key="app/src/main/res/layout/activity_signup.xml" value="0.12048192771084337" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_survey.xml" value="0.22826086956521738" />
-        <entry key="app/src/main/res/layout/custom_add_entry.xml" value="0.10648148148148148" />
-        <entry key="app/src/main/res/layout/custom_add_note.xml" value="0.11955420466058764" />
-        <entry key="app/src/main/res/layout/custom_list.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/custom_update_entry.xml" value="0.23143115942028986" />
       </map>
     </option>
   </component>
