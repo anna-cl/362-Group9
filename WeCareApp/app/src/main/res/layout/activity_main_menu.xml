@@ -12,13 +12,12 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="20dp"
         android:layout_gravity="center"
         android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/menu_icon" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
@@ -26,8 +25,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:text="Welcome to the Main Menu"
+        android:text="How can I help you?"
         android:textColor="@color/black"
+        android:gravity="center_horizontal"
         android:textSize="26dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -40,6 +40,9 @@
         android:layout_height="180dp"
         android:layout_marginTop="20dp"
         android:text="SURVEY"
+        android:textSize="17dp"
+
+        android:drawableBottom="@drawable/ic_baseline_question_answer_24"
         app:layout_constraintEnd_toStartOf="@+id/findClinicBtnId"
         app:layout_constraintHorizontal_bias="0.707"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,6 +55,8 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="46dp"
         android:text="FIND A CLINIC"
+        android:textSize="17dp"
+        android:drawableBottom="@drawable/ic_baseline_location_on_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -66,6 +71,8 @@
         app:layout_constraintHorizontal_bias="0.686"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SurveyBtnId"
+        android:drawableBottom="@drawable/ic_baseline_book_24"
+        android:textSize="17dp"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
@@ -78,6 +85,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/findClinicBtnId"
+        android:textSize="17dp"
+        android:drawableBottom="@drawable/ic_baseline_mediation_24"
         app:layout_constraintVertical_bias="0.0" />
 
         <Button
@@ -85,7 +94,7 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="428dp"
+            android:layout_marginTop="460dp"
             android:layout_marginEnd="16dp"
             android:text="SignOut"
             app:layout_constraintEnd_toEndOf="parent"
