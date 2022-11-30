@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ca.cmpt362.projects.weCareApp">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +12,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WeCare">
+
+        <activity android:name=".MeditationLandActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar"/>
+
+
+        <activity android:name=".DiaryActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar"/>
+
+        <activity android:name=".FindClinicActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar"/>
+
+        <activity android:name=".SurveyActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar"/>
+
+        <activity android:name=".MainMenuActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar"/>
+
+        <activity android:name=".ForgotPasswordActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar"/>
+
+        <activity android:name=".SignupActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar"/>
+
         <activity
             android:name=".PlayMusicActivity"
             android:exported="true" />
