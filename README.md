@@ -30,3 +30,6 @@ Stakeholders: people needing emergency mental support, or patients
 
 ### Forgot Password
 ![Screen Shot 2022-11-16 at 10 03 30 AM](https://user-images.githubusercontent.com/84203630/202259088-4a66ee4c-8f72-4d01-b42c-7bae883fe7a9.png)
+
+### Meditation Activity
+![Screen Shot 2022-11-29 at 12 19 05 AM](https://user-images.githubusercontent.com/100490492/204907405-e16a3644-179c-4683-89f1-c88b79bbd0d9.png)
