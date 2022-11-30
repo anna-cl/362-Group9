@@ -12,7 +12,7 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="31dp"
         android:layout_gravity="center"
         android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="parent"
