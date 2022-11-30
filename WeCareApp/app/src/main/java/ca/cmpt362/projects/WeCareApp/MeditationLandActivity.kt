@@ -88,15 +88,5 @@ class MeditationLandActivity:AppCompatActivity() {
             }
         })
     }
-
-
-//    private fun openMusicFragment(){
-//        var fragmentMusic: MusicFragment = MusicFragment()
-//        if(fragmentMusic != null){
-//            val transaction = supportFragmentManager.beginTransaction()
-//            transaction.replace(R.id.music_frame_layout,fragmentMusic)
-//            transaction.commit()
-//        }
-//    }
-
+    
 }
