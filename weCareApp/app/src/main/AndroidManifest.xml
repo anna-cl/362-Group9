@@ -36,9 +36,33 @@
             android:theme="@style/Theme.WeCare.NoActionBar"/>
 
         <activity
-            android:name=".LoginActivity"
-            android:theme="@style/Theme.WeCare.NoActionBar"
+            android:name=".PlayMusicActivity"
             android:exported="true" />
+        <activity
+            android:name=".MeditationLandActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar" />
+        <activity
+            android:name=".DiaryActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar" />
+        <activity
+            android:name=".FindAClinicActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar" />
+        <activity
+            android:name=".SurveyActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar" />
+        <activity
+            android:name=".MainMenuActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar" />
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar" />
+        <activity
+            android:name=".SignupActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.WeCare.NoActionBar" />
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true"
@@ -49,11 +73,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>
