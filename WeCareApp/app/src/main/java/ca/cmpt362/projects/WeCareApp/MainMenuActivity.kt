@@ -5,8 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
-import ca.cmpt362.projects.weCareApp.R
+import ca.cmpt362.projects.WeCareApp.diary.DiaryActivity
 import com.google.firebase.auth.FirebaseAuth
 
 class MainMenuActivity:AppCompatActivity() {
