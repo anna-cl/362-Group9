@@ -4,6 +4,7 @@
 //https://stackoverflow.com/questions/30931889/adding-ripple-effect-to-recyclerview-item
 //https://stackoverflow.com/questions/15142780/how-do-i-remove-extra-space-above-and-below-imageview
 //https://stackoverflow.com/questions/1492554/set-transparent-background-of-an-imageview-on-android
+//https://www.youtube.com/watch?v=DaLPIC4NbYU&ab_channel=doctorcode
 
 package ca.cmpt362.projects.weCareApp
 
@@ -55,7 +56,7 @@ class MeditationLandActivity:AppCompatActivity() {
 
     }
     private fun getMusicList(){
-
+//        TODO: add song minute here !!
         musicTitleList = arrayOf(
             "Epona Meditation",
             "Breath Meditation",
@@ -81,6 +82,7 @@ class MeditationLandActivity:AppCompatActivity() {
                 val intent = Intent(this@MeditationLandActivity, PlayMusicActivity::class.java)
                 bundle.putInt("MUSIC_POS", musicPosition)
                 bundle.putInt("MEDI_IMG_ID", imgID)
+                //        TODO: pass song name here !!
                 intent.putExtras(bundle)
                 startActivity(intent)
             }
