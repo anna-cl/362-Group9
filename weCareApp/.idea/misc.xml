@@ -17,11 +17,25 @@
         <entry key="..\:/Users/User/merge_failed/362-Group9/WeCareApp/app/src/main/res/layout/activity_main_menu.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/User/merge_failed/362-Group9/WeCareApp/app/src/main/res/layout/activity_signup.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/User/merge_failed/362-Group9/WeCareApp/app/src/main/res/layout/activity_survey.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_popup.xml" value="0.23" />
+        <entry key="app/src/main/res/drawable/ic_post_add.xml" value="0.215" />
+        <entry key="app/src/main/res/drawable/linie.xml" value="0.131" />
+        <entry key="app/src/main/res/drawable/toolbar.xml" value="0.23" />
         <entry key="app/src/main/res/drawable/wecare_logo.xml" value="0.31666666666666665" />
+        <entry key="app/src/main/res/layout/activity_diary.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_diary2.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_display_msg.xml" value="0.15" />
         <entry key="app/src/main/res/layout/activity_forgot_password.xml" value="0.24583333333333332" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.16259057971014493" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1953125" />
+        <entry key="app/src/main/res/layout/activity_main3.xml" value="0.21195652173913043" />
+        <entry key="app/src/main/res/layout/activity_main4.xml" value="0.33086876155268025" />
+        <entry key="app/src/main/res/layout/activity_main_menu.xml" value="0.16259057971014493" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/item_color.xml" value="0.11955420466058764" />
+        <entry key="app/src/main/res/layout/item_dialog_permission.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/notes_item.xml" value="0.24583333333333332" />
+        <entry key="app/src/main/res/menu/my_menu.xml" value="0.1" />
       </map>
     </option>
   </component>
