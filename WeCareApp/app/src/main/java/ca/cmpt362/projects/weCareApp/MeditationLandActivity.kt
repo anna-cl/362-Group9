@@ -70,14 +70,14 @@ class MeditationLandActivity:AppCompatActivity() {
             override fun onItemClicked(musicPosition: Int) {
                 Toast.makeText(this@MeditationLandActivity, "You click $musicPosition!", Toast.LENGTH_SHORT).show()
 
-//                // pass values and open activity:
-//                val bundle= Bundle()
-//                val intent = Intent(this@MeditationLandActivity, PlayMusicActivity::class.java)
-//                bundle.putInt("MUSIC_POS", musicPosition)
-//                bundle.putInt("MEDI_IMG_ID", imgID)
-//                //        TODO: pass song name here !!
-//                intent.putExtras(bundle)
-//                startActivity(intent)
+                // pass values and open activity:
+                val bundle= Bundle()
+                val intent = Intent(this@MeditationLandActivity, PlayMusicActivity::class.java)
+                bundle.putInt("MUSIC_POS", musicPosition)
+                bundle.putInt("MEDI_IMG_ID", imgID)
+                //        TODO: pass song name here !!
+                intent.putExtras(bundle)
+                startActivity(intent)
 
             }
         })

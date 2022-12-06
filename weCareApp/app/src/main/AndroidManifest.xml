@@ -3,7 +3,7 @@
     package="ca.cmpt362.projects.weCareApp">
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,46 +12,46 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WeCare">
-
         <activity
-            android:name="ca.cmpt362.projects.weCareApp.diary.ShowEntryActivity"
-            android:theme="@style/Theme.WeCare.NoActionBar"/>
+            android:name=".PlayMusicActivity"
+            android:exported="true" />
         <activity
-            android:name="ca.cmpt362.projects.weCareApp.diary.AddEntryActivity"
-            android:theme="@style/Theme.WeCare.NoActionBar"/>
-
-        <activity android:name="ca.cmpt362.projects.weCareApp.diary.DiaryActivity"
-            android:theme="@style/Theme.WeCare.NoActionBar"/>
-
-        <activity android:name="ca.cmpt362.projects.weCareApp.diary.DiaryIntroActivity"
-            android:theme="@style/Theme.WeCare.NoActionBar"/>
-
-        <activity android:name=".InGoodHealth"
-            android:theme="@style/Theme.WeCare.NoActionBar"/>
-
-        <activity android:name=".MeditationLandActivity"
-            android:theme="@style/Theme.WeCare.NoActionBar"/>
-
-
-        <activity android:name=".FindClinicActivity"
-            android:theme="@style/Theme.WeCare.NoActionBar"/>
-
-        <activity android:name=".SurveyActivity"
-            android:theme="@style/Theme.WeCare.NoActionBar"/>
-
-        <activity android:name=".MainMenuActivity"
-            android:theme="@style/Theme.WeCare.NoActionBar"/>
-
-        <activity android:name=".ForgotPasswordActivity"
-            android:theme="@style/Theme.WeCare.NoActionBar"/>
-
-        <activity android:name=".SignupActivity"
-            android:theme="@style/Theme.WeCare.NoActionBar"/>
-
+            android:name=".diary.ShowEntryActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar" />
+        <activity
+            android:name=".diary.AddEntryActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar" />
+        <activity
+            android:name=".diary.DiaryActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar" />
+        <activity
+            android:name=".diary.DiaryIntroActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar" />
+        <activity
+            android:name=".InGoodHealth"
+            android:theme="@style/Theme.WeCare.NoActionBar" />
+        <activity
+            android:name=".MeditationLandActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar" />
+        <activity
+            android:name=".FindClinicActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar" />
+        <activity
+            android:name=".SurveyActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar" />
+        <activity
+            android:name=".MainMenuActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar" />
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar" />
+        <activity
+            android:name=".SignupActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar" />
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/Theme.WeCare.NoActionBar"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.WeCare.NoActionBar" />
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true"
@@ -62,11 +62,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>
