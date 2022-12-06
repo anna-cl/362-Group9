@@ -4,6 +4,7 @@ import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageButton
 
 class PlayMusicActivity : AppCompatActivity() {
 
@@ -32,18 +33,13 @@ class PlayMusicActivity : AppCompatActivity() {
         val image: View = findViewById(R.id.play_music_layout)
         image.setBackgroundResource(imageID)
 
-        //Play music:
-
-
     }
 
-    private var isPlaying = false
-
+    //Play music:
     fun playBtnClicked(view: View){
         if(mediaPlayer == null) {
             mediaPlayer = MediaPlayer.create(this, musicList[musicPos])
             mediaPlayer!!.start()
-            isPlaying = true
             println("=============== $musicPos, mediaPlayer!!.isPlaying: ${mediaPlayer!!.isPlaying}")
         }else if (!mediaPlayer!!.isPlaying){
 //        }else if (isPlaying != true) {
@@ -51,13 +47,23 @@ class PlayMusicActivity : AppCompatActivity() {
 
             println("-------play!")
             //TOdo: setimagesource pause button
+            val playBtn = findViewById<ImageButton>(R.id.playBtn)
         }else if(mediaPlayer!!.isPlaying){
 //        }else if (isPlaying == true){
             println("-------pause!")
             mediaPlayer!!.pause()
 
-            isPlaying = false
             //TOdo: setimagesource play button
         }
     }
+
+
+//    override fun onDestroy() {
+//        super.onDestroy()
+//
+//        if (buttonSound1.isPlaying()) {
+//            buttonSound1.stop()
+//            buttonSound1.release()
+//        }
+//    }
 }

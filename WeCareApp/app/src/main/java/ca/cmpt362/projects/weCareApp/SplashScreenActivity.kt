@@ -25,7 +25,8 @@ class SplashScreenActivity : AppCompatActivity() {
 
 //        open Main Activity:
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, LoginActivity::class.java)
+//            val intent = Intent(this, LoginActivity::class.java) // --------- UNCOMMENT
+            val intent = Intent(this, MainMenuActivity::class.java) //---------- DELETE
             startActivity(intent)
             finish()
         }, 3500)

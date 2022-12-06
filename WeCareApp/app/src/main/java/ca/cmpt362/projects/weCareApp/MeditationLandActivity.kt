@@ -7,7 +7,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import ca.cmpt362.projects.weCareApp.R
 import kotlin.random.Random
 
 class MeditationLandActivity:AppCompatActivity() {
@@ -36,7 +35,7 @@ class MeditationLandActivity:AppCompatActivity() {
             R.drawable.cosmos2,
             R.drawable.cosmos3,
             R.drawable.zen1,
-            R.drawable.zen_stackstones
+            R.drawable.zen_stackstones,
         )
 
         var randomInt: Int = Random.nextInt(0,6)
