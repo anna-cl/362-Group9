@@ -154,16 +154,11 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
+                        android:id="@+id/google_Btn_SignIn"
+                        android:layout_width="100dp"
+                        android:layout_height="70dp"
                         android:layout_margin="8dp"
-                        app:srcCompat="@drawable/ic_facebook"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp" />
-
-                    <ImageView
-                        android:layout_margin="8dp"
-                        app:srcCompat="@drawable/ic_twitter"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp" />
+                        app:srcCompat="@drawable/google_icon" />
                 </LinearLayout>
             </LinearLayout>
 
