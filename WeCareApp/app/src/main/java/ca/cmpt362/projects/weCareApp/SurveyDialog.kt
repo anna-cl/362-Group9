@@ -25,18 +25,15 @@ class SurveyDialog:DialogFragment(), DialogInterface.OnClickListener {
             )
             builder.setView(view)
             builder.setTitle("Do you require support? Please choose a suitable option")
-            builder.setNegativeButton("CANCEL", DialogInterface.OnClickListener { dialogInterface, i ->
-                startActivity(Intent(requireActivity(), MainMenuActivity::class.java))
-            })
-            builder.setSingleChoiceItems(choice, 0){ dialogInterface, i: Int ->
-                startActivity(Intent(requireActivity(), MeditationLandActivity::class.java))
-            }
-            builder.setSingleChoiceItems(choice, 1){ dialogInterface, i: Int ->
-                startActivity(Intent(requireActivity(), FindClinicActivity::class.java))
-            }
-            builder.setSingleChoiceItems(choice, 2){ dialogInterface, i: Int ->
+            builder.setNegativeButton("WRITE IN YOUR DIARY", DialogInterface.OnClickListener { dialogInterface, i ->
                 startActivity(Intent(requireActivity(), DiaryActivity::class.java))
-            }
+            })
+            builder.setNeutralButton("FIND A CLINIC", DialogInterface.OnClickListener { dialogInterface, i ->
+                startActivity(Intent(requireActivity(), FindClinicActivity::class.java))
+            })
+            builder.setPositiveButton("MEDITATE FOR 10 MINUTES", DialogInterface.OnClickListener { dialogInterface, i ->
+                startActivity(Intent(requireActivity(), MeditationLandActivity::class.java))
+            })
             dialog = builder.create()
         }
         return dialog
