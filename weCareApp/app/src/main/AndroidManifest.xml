@@ -16,8 +16,17 @@
         <activity android:name=".MeditationLandActivity"
             android:theme="@style/Theme.WeCare.NoActionBar"/>
 
+        <activity
+            android:name="ca.cmpt362.projects.weCareApp.diary.ShowEntryActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar"/>
+        <activity
+            android:name="ca.cmpt362.projects.weCareApp.diary.AddEntryActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar"/>
 
-        <activity android:name=".DiaryActivity"
+        <activity android:name="ca.cmpt362.projects.weCareApp.diary.DiaryActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar"/>
+
+        <activity android:name="ca.cmpt362.projects.weCareApp.diary.DiaryIntroActivity"
             android:theme="@style/Theme.WeCare.NoActionBar"/>
 
         <activity android:name=".FindClinicActivity"
