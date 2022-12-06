@@ -1,4 +1,8 @@
 <resources>
+    <string name="facebook_app_id">1093692514664072</string>
+    <string name="fb_login_protocol_scheme">fb1093692514664072</string>
+    <string name="facebook_client_token">93a7d611a8a99d67c17ec5b5c1a62e32</string>
+
     <string name="app_name">WeCare</string>
     <string name="text_forgot_password_title"> Forgot password?</string>
     <string name="text_forgot_password_message"> We will send you a link to reset your password</string>
