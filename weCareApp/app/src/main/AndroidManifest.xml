@@ -13,9 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WeCare">
 
-        <activity android:name=".MeditationLandActivity"
-            android:theme="@style/Theme.WeCare.NoActionBar"/>
-
         <activity
             android:name="ca.cmpt362.projects.weCareApp.diary.ShowEntryActivity"
             android:theme="@style/Theme.WeCare.NoActionBar"/>
@@ -27,6 +24,12 @@
             android:theme="@style/Theme.WeCare.NoActionBar"/>
 
         <activity android:name="ca.cmpt362.projects.weCareApp.diary.DiaryIntroActivity"
+            android:theme="@style/Theme.WeCare.NoActionBar"/>
+
+        <activity android:name=".InGoodHealth"
+            android:theme="@style/Theme.WeCare.NoActionBar"/>
+
+        <activity android:name=".MeditationLandActivity"
             android:theme="@style/Theme.WeCare.NoActionBar"/>
 
         <activity android:name=".FindClinicActivity"

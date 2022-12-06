@@ -10,18 +10,30 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.firebase.auth.AuthResult
+import com.facebook.CallbackManager
+import com.facebook.FacebookCallback
+import com.facebook.FacebookException
+import com.facebook.login.LoginManager
+import com.facebook.login.LoginResult
+import com.facebook.login.widget.LoginButton
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 
 
 class SignupActivity : AppCompatActivity() {
+    /*private lateinit var gso: GoogleSignInOptions
+    private lateinit var gsc: GoogleSignInClient
+    private lateinit var googleSignUp:ImageView*/
+
     // to register user, we need the following variables first:
     private lateinit var email:EditText
     private lateinit var fName:EditText
@@ -32,6 +44,7 @@ class SignupActivity : AppCompatActivity() {
     private lateinit var fireStore:FirebaseFirestore
     private lateinit var userID:String
     private lateinit var buttonSignUp:Button
+    private val EMAIL = "email"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +54,10 @@ class SignupActivity : AppCompatActivity() {
         supportActionBar?.setDisplayShowTitleEnabled(false)
         toolbar.setNavigationOnClickListener { super.onBackPressed() }
         setStatusBarWhite(this@SignupActivity)
+
+        /*gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build()
+        gsc = GoogleSignIn.getClient(this, gso)
+        googleSignUp = findViewById(R.id.google_btn_SignUp)*/
 
         // getting variables' instances
         email = findViewById(R.id.et_email)
@@ -64,10 +81,10 @@ class SignupActivity : AppCompatActivity() {
             var getFullName = fName.text.toString()  // get the full name entered
             var getPhoneNum = phone.text.toString() // get the phone number
 
-             if (TextUtils.isEmpty(getEmail)){
-                 email.setError("Email required!")  // if email field is empty, show error
-                 return@setOnClickListener
-             }
+            if (TextUtils.isEmpty(getEmail)){
+                email.setError("Email required!")  // if email field is empty, show error
+                return@setOnClickListener
+            }
             if (TextUtils.isEmpty(getPass)){
                 password.setError("Password required!") // if password field is empty, show error
                 return@setOnClickListener
@@ -85,10 +102,8 @@ class SignupActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // TODO : ProgressBar stuff
-
             // register user account into Firebase
-            // code from: https://firebase.google.com/docs/auth/android/password-auth#kotlin+ktx_3
+            // https://firebase.google.com/docs/auth/android/password-auth#kotlin+ktx_3
             firebaseAuth.createUserWithEmailAndPassword(getEmail, getPass)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
@@ -108,12 +123,12 @@ class SignupActivity : AppCompatActivity() {
                         userHashMap.put("password", getPass)
 
                         docRef.set(userHashMap).addOnSuccessListener {
-                            void:Void? ->
-                                Toast.makeText(this, "User profile created!", Toast.LENGTH_SHORT).show()
+                                void:Void? ->
+                            Toast.makeText(this, "User profile created!", Toast.LENGTH_SHORT).show()
                             // user creation successful only: if user is authenticated (we then allow them to write the data to the db, else not)
                             // change to db rules for above purpose: allow read, write: if request.auth != null
                         }.addOnFailureListener{
-                            exception: java.lang.Exception -> Toast.makeText(this, exception.message, Toast.LENGTH_SHORT).show()
+                                exception: java.lang.Exception -> Toast.makeText(this, exception.message, Toast.LENGTH_SHORT).show()
                         }
                         // create account for user and direct to MainMenu Activity
                         startActivity(Intent(this@SignupActivity, MainMenuActivity::class.java))
@@ -128,7 +143,6 @@ class SignupActivity : AppCompatActivity() {
                 }
         }
     }
-
     private fun setStatusBarWhite(activity: AppCompatActivity){
         //Make status bar icons color dark
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

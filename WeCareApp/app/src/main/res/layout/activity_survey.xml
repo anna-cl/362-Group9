@@ -49,30 +49,40 @@
                 android:id="@+id/btn1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/purple_700"
+                android:onClick="onClickRadioButton1"
                 android:text="Poor" />
 
             <RadioButton
                 android:id="@+id/btn2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/purple_700"
+                android:onClick="onClickRadioButton1"
                 android:text="Fair" />
 
             <RadioButton
                 android:id="@+id/btn3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/purple_700"
+                android:onClick="onClickRadioButton1"
                 android:text="Good" />
 
             <RadioButton
                 android:id="@+id/btn4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/purple_700"
+                android:onClick="onClickRadioButton1"
                 android:text="Very Good" />
 
             <RadioButton
                 android:id="@+id/btn5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/purple_700"
+                android:onClick="onClickRadioButton1"
                 android:text="Excellent" />
         </RadioGroup>
 
@@ -103,18 +113,24 @@
                 android:id="@+id/btn6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/purple_700"
+                android:onClick="onClickRadioButton2"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/btn7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/purple_700"
+                android:onClick="onClickRadioButton2"
                 android:text="No" />
 
             <RadioButton
                 android:id="@+id/btn8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/purple_700"
+                android:onClick="onClickRadioButton2"
                 android:text="Not sure" />
         </RadioGroup>
 
@@ -145,24 +161,32 @@
                 android:id="@+id/btn9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/purple_700"
+                android:onClick="onClickRadioButton3"
                 android:text="Very often" />
 
             <RadioButton
                 android:id="@+id/btn10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/purple_700"
+                android:onClick="onClickRadioButton3"
                 android:text="Somewhat often" />
 
             <RadioButton
                 android:id="@+id/btn11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/purple_700"
+                android:onClick="onClickRadioButton3"
                 android:text="Not so often" />
 
             <RadioButton
                 android:id="@+id/btn12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/purple_700"
+                android:onClick="onClickRadioButton3"
                 android:text="Not at all" />
         </RadioGroup>
 
@@ -193,24 +217,32 @@
                 android:id="@+id/btn13"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/purple_700"
+                android:onClick="onClickRadioButton4"
                 android:text="Very often" />
 
             <RadioButton
                 android:id="@+id/btn14"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/purple_700"
+                android:onClick="onClickRadioButton4"
                 android:text="Somewhat often" />
 
             <RadioButton
                 android:id="@+id/btn15"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/purple_700"
+                android:onClick="onClickRadioButton4"
                 android:text="Not so often" />
 
             <RadioButton
                 android:id="@+id/btn16"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/purple_700"
+                android:onClick="onClickRadioButton4"
                 android:text="Not at all" />
         </RadioGroup>
         <TextView
@@ -240,30 +272,40 @@
                 android:id="@+id/btn17"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/purple_700"
+                android:onClick="onClickRadioButton5"
                 android:text="Never" />
 
             <RadioButton
                 android:id="@+id/btn18"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/purple_700"
+                android:onClick="onClickRadioButton5"
                 android:text="Once in a while" />
 
             <RadioButton
                 android:id="@+id/btn19"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/purple_700"
+                android:onClick="onClickRadioButton5"
                 android:text="About half the time" />
 
             <RadioButton
                 android:id="@+id/btn20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/purple_700"
+                android:onClick="onClickRadioButton5"
                 android:text="Most of the time" />
 
             <RadioButton
                 android:id="@+id/btn21"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/purple_700"
+                android:onClick="onClickRadioButton5"
                 android:text="Always" />
         </RadioGroup>
 
