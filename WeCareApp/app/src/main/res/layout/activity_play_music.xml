@@ -23,18 +23,6 @@
             android:layout_weight="3"
             android:progress="0"/>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center"
-            android:layout_weight="2"
-            android:clickable="true"
-            android:onClick="playBtnClicked"
-            android:src="@drawable/play_circle_100"
-            android:scaleType="center"
-            app:maxImageSize="100dp"/>
-
-
         <ImageButton
             android:id="@+id/playBtn"
             android:layout_width="wrap_content"
@@ -46,10 +34,7 @@
             android:onClick="playBtnClicked"
             android:scaleType="centerInside"
             app:srcCompat="@drawable/play_circle_100" />
-
-
-
-
+        
     </LinearLayout>
 </ScrollView>
 
