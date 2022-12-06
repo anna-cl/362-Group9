@@ -32,6 +32,7 @@
         <activity android:name=".MeditationLandActivity"
             android:theme="@style/Theme.WeCare.NoActionBar"/>
 
+
         <activity android:name=".FindClinicActivity"
             android:theme="@style/Theme.WeCare.NoActionBar"/>
 
