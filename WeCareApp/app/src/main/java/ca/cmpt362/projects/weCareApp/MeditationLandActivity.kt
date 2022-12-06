@@ -24,29 +24,29 @@ class MeditationLandActivity:AppCompatActivity() {
         recyclerview.layoutManager = LinearLayoutManager(this)
         recyclerview.setHasFixedSize(true)
 
-//        setRandomImage()
+        setRandomImage()
         getMusicList()
 
     }
 
-//    fun setRandomImage(){
-//        var meditationImageList = arrayOf(
-//            R.drawable.cosmos1,
-//            R.drawable.lotus,
-//            R.drawable.cosmos2,
-//            R.drawable.cosmos3,
-//            R.drawable.zen1,
-//            R.drawable.zen_stackstones
-//        )
-//
-//        var randomInt: Int = Random.nextInt(0,6)
-//        imgID = meditationImageList[randomInt]
-//
-//        var imageView = ImageView(this)
-//        imageView = findViewById(R.id.meditationImage)
-//        imageView.setImageResource(imgID)
-//
-//    }
+    fun setRandomImage(){
+        var meditationImageList = arrayOf(
+            R.drawable.cosmos1,
+            R.drawable.lotus,
+            R.drawable.cosmos2,
+            R.drawable.cosmos3,
+            R.drawable.zen1,
+            R.drawable.zen_stackstones
+        )
+
+        var randomInt: Int = Random.nextInt(0,6)
+        imgID = meditationImageList[randomInt]
+
+        var imageView = ImageView(this)
+        imageView = findViewById(R.id.meditationImage)
+        imageView.setImageResource(imgID)
+
+    }
 
     private fun getMusicList(){
 //        TODO: add song minute here !!
