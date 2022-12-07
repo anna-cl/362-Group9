@@ -100,7 +100,7 @@ class PlayMusicActivity : AppCompatActivity() {
         super.onDestroy()
 
         //stop music when leaving page:
-        if(mediaPlayer == null) {
+        if(mediaPlayer != null) {
             mediaPlayer!!.stop()
         }
 
