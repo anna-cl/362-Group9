@@ -5,18 +5,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import ca.cmpt362.projects.weCareApp.models.Notes
+import ca.cmpt362.projects.weCareApp.models.Diary_Entry
 import ca.cmpt362.projects.weCareApp.databinding.NotesItemBinding
 
-class RvAdapter(var list: ArrayList<Notes>, var clickItem: ClickItem) :
+class RvAdapter(var list: ArrayList<Diary_Entry>, var clickItem: ClickItem) :
     RecyclerView.Adapter<RvAdapter.Vh>() {
     inner class Vh(var notesItemBinding: NotesItemBinding) :
         RecyclerView.ViewHolder(notesItemBinding.root) {
         @SuppressLint("SetTextI18n")
-        fun onBind(notes: Notes, position: Int) {
-            if (notes.name != null || notes.notes != null) {
+        fun onBind(notes: Diary_Entry, position: Int) {
+            if (notes.name != null || notes.entry != null) {
                 notesItemBinding.tvName.setText(notes.name)
-                notesItemBinding.tvNotes.setText(notes.notes)
+                notesItemBinding.tvNotes.setText(notes.entry)
                 notesItemBinding.time.text = notes.dataTime
 
                 if (notesItemBinding.tvName.text.toString().length >= 12){
@@ -48,7 +48,7 @@ class RvAdapter(var list: ArrayList<Notes>, var clickItem: ClickItem) :
     override fun getItemCount(): Int = list.size
 
     interface ClickItem {
-        fun itemClick(view: View, notes: Notes, position: Int)
-        fun cardClick(notes: Notes, position: Int)
+        fun itemClick(view: View, notes: Diary_Entry, position: Int)
+        fun cardClick(notes: Diary_Entry, position: Int)
     }
 }

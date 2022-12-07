@@ -13,10 +13,11 @@ import ca.cmpt362.projects.weCareApp.R
 import ca.cmpt362.projects.weCareApp.databinding.ActivityDiaryBinding
 import ca.cmpt362.projects.weCareApp.databinding.ItemDialogPermissionBinding
 import ca.cmpt362.projects.weCareApp.models.MyObject
-import ca.cmpt362.projects.weCareApp.models.Notes
+import ca.cmpt362.projects.weCareApp.models.Diary_Entry
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
+import java.util.*
 
 class DiaryActivity:AppCompatActivity() {
     lateinit var binding: ActivityDiaryBinding
@@ -24,7 +25,7 @@ class DiaryActivity:AppCompatActivity() {
     lateinit var storage: FirebaseStorage
     lateinit var storageReference: StorageReference
     lateinit var adapter: RvAdapter
-    lateinit var list: ArrayList<Notes>
+    lateinit var list: ArrayList<Diary_Entry>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,14 +40,14 @@ class DiaryActivity:AppCompatActivity() {
 
         adapter = RvAdapter(list, object : RvAdapter.ClickItem {
             @SuppressLint("NotifyDataSetChanged")
-            override fun itemClick(view: View, notes: Notes, position: Int) {
+            override fun itemClick(view: View, notes: Diary_Entry, position: Int) {
                 val popupMenu = PopupMenu(binding.root.context, view)
                 popupMenu.inflate(R.menu.my_menu)
 
                 popupMenu.setOnMenuItemClickListener {
                     when (it.itemId) {
                         R.id.edit -> {
-                            MyObject.notes = notes
+                            MyObject.entry = notes
                             MyObject.type = "Edit"
                             startActivity(Intent(this@DiaryActivity, AddEntryActivity::class.java))
                         }
@@ -90,8 +91,8 @@ class DiaryActivity:AppCompatActivity() {
                 popupMenu.show()
             }
 
-            override fun cardClick(notes: Notes, position: Int) {
-                MyObject.notes = notes
+            override fun cardClick(notes: Diary_Entry, position: Int) {
+                MyObject.entry = notes
                 startActivity(Intent(this@DiaryActivity, ShowEntryActivity::class.java))
             }
         })
@@ -104,7 +105,7 @@ class DiaryActivity:AppCompatActivity() {
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
                         task.result.forEach {
-                            val notes = it.toObject(Notes::class.java)
+                            val notes = it.toObject(Diary_Entry::class.java)
                             list.add(notes)
                         }
                     }
