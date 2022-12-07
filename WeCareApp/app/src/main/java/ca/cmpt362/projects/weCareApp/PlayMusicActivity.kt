@@ -3,9 +3,12 @@ package ca.cmpt362.projects.weCareApp
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.SeekBar
+import java.lang.Exception
 
 class PlayMusicActivity : AppCompatActivity() {
 
@@ -20,6 +23,10 @@ class PlayMusicActivity : AppCompatActivity() {
     private var mediaPlayer: MediaPlayer? = null
     private var musicPos = 0
     private lateinit var playBtn: ImageView
+
+    lateinit var runnable: Runnable
+    private var handler = Handler()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,13 +60,49 @@ class PlayMusicActivity : AppCompatActivity() {
             val pauseBtn = findViewById<ImageButton>(R.id.playBtn)
             pauseBtn.setImageResource(R.drawable.pause_circle_100)
         }
-    }
 
+        val seekbar = findViewById<SeekBar>(R.id.seekBar)
+
+        //initialize seek bar and run:
+        seekbar.progress = 0
+        if (mediaPlayer != null){
+            seekbar.max = mediaPlayer!!.duration
+
+            handler.postDelayed(object: Runnable{
+                override fun run() {
+                    try{
+                        seekbar.progress = mediaPlayer!!.currentPosition
+                        handler.postDelayed(this, 1000)
+                    }catch (e: Exception){
+                        seekbar.progress = 0
+                    }
+                }
+            }, 0)
+        }
+
+        //running seek bar:
+        seekbar.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener{
+            override fun onProgressChanged(p0: SeekBar?, position: Int, changed: Boolean) {
+                if (changed){
+                    mediaPlayer!!.seekTo(position)
+                }
+            }
+
+            override fun onStartTrackingTouch(p0: SeekBar?) {
+            }
+
+            override fun onStopTrackingTouch(p0: SeekBar?) {
+            }
+        })
+    }
 
     override fun onDestroy() {
         super.onDestroy()
 
         //stop music when leaving page:
-        mediaPlayer!!.stop()
+        if(mediaPlayer == null) {
+            mediaPlayer!!.stop()
+        }
+
     }
 }

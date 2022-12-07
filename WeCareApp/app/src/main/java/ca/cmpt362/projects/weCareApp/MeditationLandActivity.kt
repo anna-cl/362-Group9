@@ -50,12 +50,12 @@ class MeditationLandActivity:AppCompatActivity() {
     private fun getMusicList(){
 //        TODO: add song minute here !!
         musicTitleList = arrayOf(
-            "Epona Meditation",
-            "Breath Meditation",
-            "Relaxing Radiance Noise",
-            "Relaxing Radiance Peace",
-            "Relaxing Radiance Energy",
-            "Riopy Meditation"
+            "Epona Meditation 2:15",
+            "Breath Meditation 3:50",
+            "Relaxing Radiance Noise 1:05",
+            "Relaxing Radiance Peace 1:05",
+            "Relaxing Radiance Energy 1:05",
+            "Riopy Meditation 4:56"
         )
 
         for (i in musicTitleList.indices){
@@ -67,14 +67,11 @@ class MeditationLandActivity:AppCompatActivity() {
         recyclerview.adapter = adapter
         adapter.setOnItemClickListener(object: RecyclerListAdapter.onMusicItemClickListener{
             override fun onItemClicked(musicPosition: Int) {
-                Toast.makeText(this@MeditationLandActivity, "You click $musicPosition!", Toast.LENGTH_SHORT).show()
-
                 // pass values and open activity:
                 val bundle= Bundle()
                 val intent = Intent(this@MeditationLandActivity, PlayMusicActivity::class.java)
                 bundle.putInt("MUSIC_POS", musicPosition)
                 bundle.putInt("MEDI_IMG_ID", imgID)
-                //        TODO: pass song name here !!
                 intent.putExtras(bundle)
                 startActivity(intent)
 
