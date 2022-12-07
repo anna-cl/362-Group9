@@ -34,7 +34,7 @@
             android:onClick="playBtnClicked"
             android:scaleType="centerInside"
             app:srcCompat="@drawable/play_circle_100" />
-        
+
     </LinearLayout>
 </ScrollView>
 

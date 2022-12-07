@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageButton
+import android.widget.ImageView
 
 class PlayMusicActivity : AppCompatActivity() {
 
@@ -18,6 +19,7 @@ class PlayMusicActivity : AppCompatActivity() {
     )
     private var mediaPlayer: MediaPlayer? = null
     private var musicPos = 0
+    private lateinit var playBtn: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +29,6 @@ class PlayMusicActivity : AppCompatActivity() {
         val bundle: Bundle = intent.extras!!
         musicPos = bundle.getInt("MUSIC_POS")
         val imageID: Int = bundle.getInt("MEDI_IMG_ID")
-//        TODO: pass song name here !!
 
         //set background image:
         val image: View = findViewById(R.id.play_music_layout)
@@ -47,23 +48,29 @@ class PlayMusicActivity : AppCompatActivity() {
 
             println("-------play!")
             //TOdo: setimagesource pause button
-            val playBtn = findViewById<ImageButton>(R.id.playBtn)
+            playBtn = findViewById<ImageButton>(R.id.playBtn)
+            playBtn.setImageResource(R.drawable.play_circle_100)
         }else if(mediaPlayer!!.isPlaying){
 //        }else if (isPlaying == true){
             println("-------pause!")
             mediaPlayer!!.pause()
-
-            //TOdo: setimagesource play button
+            val pauseBtn = findViewById<ImageButton>(R.id.playBtn)
+            pauseBtn.setImageResource(R.drawable.pause_circle_100)
         }
     }
 
 
-//    override fun onDestroy() {
-//        super.onDestroy()
+    override fun onDestroy() {
+        super.onDestroy()
+
+        playBtn = findViewById(R.id.playBtn)
+//        playBtn.setOnClickListener(
 //
+//        )
+    //
 //        if (buttonSound1.isPlaying()) {
 //            buttonSound1.stop()
 //            buttonSound1.release()
 //        }
-//    }
+    }
 }
