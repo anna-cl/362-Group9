@@ -1,0 +1,42 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16sp"
+    android:scrollbarSize="25sp"
+    android:id="@+id/play_music_layout"
+    tools:context=".PlayMusicActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:padding="5dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="100dp"
+        android:orientation="vertical">
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:progress="0"/>
+
+        <ImageButton
+            android:id="@+id/playBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="#0000"
+            android:elevation="10dp"
+            android:layout_gravity="center"
+            android:onClick="playBtnClicked"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/play_circle_100" />
+
+    </LinearLayout>
+</ScrollView>
+
+<!--Background mask-->
+<!--    android:foreground="#80DBDEE4"-->
