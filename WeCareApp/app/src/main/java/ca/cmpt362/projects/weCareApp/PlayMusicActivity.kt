@@ -41,18 +41,14 @@ class PlayMusicActivity : AppCompatActivity() {
         if(mediaPlayer == null) {
             mediaPlayer = MediaPlayer.create(this, musicList[musicPos])
             mediaPlayer!!.start()
-            println("=============== $musicPos, mediaPlayer!!.isPlaying: ${mediaPlayer!!.isPlaying}")
+
         }else if (!mediaPlayer!!.isPlaying){
-//        }else if (isPlaying != true) {
             mediaPlayer!!.start()
 
-            println("-------play!")
-            //TOdo: setimagesource pause button
             playBtn = findViewById<ImageButton>(R.id.playBtn)
             playBtn.setImageResource(R.drawable.play_circle_100)
+
         }else if(mediaPlayer!!.isPlaying){
-//        }else if (isPlaying == true){
-            println("-------pause!")
             mediaPlayer!!.pause()
             val pauseBtn = findViewById<ImageButton>(R.id.playBtn)
             pauseBtn.setImageResource(R.drawable.pause_circle_100)
@@ -63,14 +59,7 @@ class PlayMusicActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
 
-        playBtn = findViewById(R.id.playBtn)
-//        playBtn.setOnClickListener(
-//
-//        )
-    //
-//        if (buttonSound1.isPlaying()) {
-//            buttonSound1.stop()
-//            buttonSound1.release()
-//        }
+        //stop music when leaving page:
+        mediaPlayer!!.stop()
     }
 }
