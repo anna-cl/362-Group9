@@ -1,6 +1,6 @@
 package ca.cmpt362.projects.weCareApp.models
 
 object MyObject {
-    var notes = Notes()
+    var entry = Diary_Entry()
     var type = ""
 }

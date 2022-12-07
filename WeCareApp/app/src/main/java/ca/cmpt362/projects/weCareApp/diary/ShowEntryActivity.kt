@@ -12,7 +12,7 @@ class ShowEntryActivity : AppCompatActivity() {
         binding = ActivityShowEntryBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.tvName.text = MyObject.notes.name
-        binding.tvNotes.text = MyObject.notes.notes
+        binding.tvName.text = MyObject.entry.name
+        binding.tvNotes.text = MyObject.entry.entry
     }
 }

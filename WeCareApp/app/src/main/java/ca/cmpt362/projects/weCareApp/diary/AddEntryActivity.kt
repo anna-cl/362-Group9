@@ -7,7 +7,6 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import ca.cmpt362.projects.weCareApp.databinding.ActivityAddEntryBinding
-import ca.cmpt362.projects.weCareApp.diary.DiaryActivity
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.firestore.FirebaseFirestore
@@ -16,7 +15,7 @@ import com.google.firebase.storage.StorageReference
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import ca.cmpt362.projects.weCareApp.models.MyObject
-import ca.cmpt362.projects.weCareApp.models.Notes
+import ca.cmpt362.projects.weCareApp.models.Diary_Entry
 
 class AddEntryActivity : AppCompatActivity() {
     lateinit var binding: ActivityAddEntryBinding
@@ -66,9 +65,9 @@ class AddEntryActivity : AppCompatActivity() {
                         if (name.isNotEmpty() && notes.isNotEmpty()) {
                             firebaseFirestore.collection("Notes")
                                 .add(
-                                    Notes(
+                                    Diary_Entry(
                                         name = name,
-                                        notes = notes,
+                                        entry = notes,
                                         dataTime = formatted
                                     )
                                 )
@@ -110,13 +109,13 @@ class AddEntryActivity : AppCompatActivity() {
                     }
                 }
                 "Edit" -> {
-                    binding.edtName.setText(MyObject.notes.name)
-                    binding.edtNotes.setText(MyObject.notes.notes)
+                    binding.edtName.setText(MyObject.entry.name)
+                    binding.edtNotes.setText(MyObject.entry.entry)
                     btnSave.setOnClickListener {
 
                         var document =
                             firebaseFirestore.collection("Notes")
-                                .document(MyObject.notes.id)
+                                .document(MyObject.entry.id)
 
                         val name = binding.edtName.text.toString()
                         var notes = binding.edtNotes.text.toString()
